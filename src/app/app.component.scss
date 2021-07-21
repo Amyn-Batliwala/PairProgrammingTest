@@ -1,0 +1,47 @@
+
+
+.container {
+    margin: 24px 16px;
+    width: 100vw;
+
+    .cuisine-container {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: auto;
+        justify-content: center;
+        row-gap: 20px;
+
+        .cuisine-item {
+            font-size: 1.2rem;
+            background-color: #c0c0c0;
+            font-weight: 500;
+            padding: 20px;
+            width: 248px;
+
+            > div {
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: unset;
+                }
+            }
+
+            img {
+                height: 128px;
+                width: 248px;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .cuisine-container {
+            grid-auto-flow: row;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 20px;
+            justify-content: space-between;
+            margin-right: 20px;
+
+        }
+    }
+}
